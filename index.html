@@ -74,7 +74,7 @@
             
             <div class="tabs-container">
                 <div class="tabs-nav">
-                    <button class="tab-link active" onclick="openTab(event, 'gl-weapon')">Weapon</button>
+                    <button class="tab-link" onclick="openTab(event, 'gl-weapon')">Weapon</button>
                     <button class="tab-link" onclick="openTab(event, 'gl-armor')">Armor</button>
                     <button class="tab-link" onclick="openTab(event, 'gl-accessory')">Accessory</button>
                     <button class="tab-link" onclick="openTab(event, 'gl-spirit')">Spirit</button>
@@ -82,13 +82,13 @@
                 </div>
 
                 <div class="tabs-content">
-                    <div id="gl-weapon" class="tab-panel active">
+                    <div id="gl-weapon" class="tab-panel">
                         <div class="table-wrapper">
                             <table>
                                 <tr>
                                     <th>Name</th>
                                     <th>Effect</th>
-                                    <th>Option Refinement (In order of priority)</th>
+                                    <th>Option Refinement (Priority)</th>
                                 </tr>
                                 <tr>
                                     <td>Sealed Stand of Darkness</td>
@@ -97,12 +97,12 @@
                                 </tr>
                                 <tr>
                                     <td>Sealed Lover of Gold</td>
-                                    <td>Summon some Light Pillars and Dark Holes that deal damage when using skill. (no need to hit mobs)</td>
+                                    <td>Summon some Light Pillars and Dark Holes that deal damage when using skill.</td>
                                     <td>+6% Armor Break<br>+15% More DMG: Boss / Named<br>+6% Attack Speed<br>+3700-3949 Crit Damage</td>
                                 </tr>
                             </table>
                         </div>
-                        <p class="info-text">Information: Sealed Stand of Darkness to evolve to best weapon. Sealed Lover of Gold has much less damage than but it is consistent and easier.</p>
+                        <p class="info-text">Information: Sealed Stand of Darkness to evolve to best weapon. Sealed Lover of Gold has much less damage but is consistent.</p>
                     </div>
 
                     <div id="gl-armor" class="tab-panel">
@@ -111,77 +111,39 @@
                                 <tr>
                                     <th>Name</th>
                                     <th>Effect</th>
-                                    <th>Option Refinement (In order of priority)</th>
+                                    <th>Option Refinement</th>
                                 </tr>
                                 <tr>
                                     <td>Corrupted Voidsteel (Pool set)</td>
-                                    <td><strong>2 pieces:</strong> Summon a blood pool dealing damage to you and enemy. (can crit)<br>
-                                    <strong>4 pieces:</strong> Summon additional blood pool dealing damage to you and enemy. (total 2 pools)</td>
-                                    <td>+5% Shorter Cooldown<br>+800-935 Attack<br>+1700-1815 Crit Damage</td>
+                                    <td><strong>2 pieces:</strong> Summon a blood pool.<br><strong>4 pieces:</strong> Summon total 2 pools.</td>
+                                    <td>+5% CD<br>+800-935 Attack<br>+1700-1815 Crit Damage</td>
                                 </tr>
-                                <tr>
-                                    <td colspan="3" class="sub-info">Information: An all round armor set: - Each pool deals 4 hits; - It has decent DPS; - Help proc brooches that are related to hit or receive Crit damage: Penetration, Troll…</td>
-                                }
+                                <tr><td colspan="3" class="sub-info">Help proc brooches like Penetration, Troll…</td></tr>
                                 <tr>
                                     <td>Eternal Desire (Desire set)</td>
-                                    <td><strong>2 pieces:</strong> +4% Damage when you are in Desire Awakening. Decrease 4% current HP/s<br>
-                                    <strong>4 pieces:</strong> +6% Damage when you are in Desire Awakening (10% Damage Total). Decrease 4% current HP/s (-8% HP/s)</td>
-                                    <td>+5% Shorter Cooldown<br>+800-935 Attack<br>+1700-1815 Crit Damage</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="3" class="sub-info">Information: Stronger than Corrupted Voidsteel. Help proc brooches that are related to receive damage (not crit): Backstep, Fury…</td>
+                                    <td><strong>4 pieces:</strong> +10% Damage in Desire Awakening. Decrease 8% HP/s.</td>
+                                    <td>+5% CD<br>+800-935 Attack<br>+1700-1815 Crit Damage</td>
                                 </tr>
                                 <tr>
                                     <td>Void of Silence (Reversed set)</td>
-                                    <td><strong>2 pieces:</strong> +7% Damage - Your Control is reversed periodically. (5sec normal 5sec dumb)<br>
-                                    <strong>4 pieces:</strong> +8% Damage (15% Damage Total) - Your Control is reversed irregularly. (sometimes normal sometimes dumb)</td>
-                                    <td>+5% Shorter Cooldown<br>+800-935 Attack<br>+1700-1815 Crit Damage</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="3" class="sub-info">Information: Highest damage potential set but not for skill issue players (Ranking mainly)</td>
+                                    <td><strong>4 pieces:</strong> +15% Damage - Control is reversed.</td>
+                                    <td>Highest damage set but risky.</td>
                                 </tr>
                                 <tr>
                                     <td>Unyielding Soul (EX set)</td>
-                                    <td><strong>2 pieces:</strong> +5 SV per 5 seconds<br>
-                                    <strong>4 pieces:</strong> Increase ~ 10000% EX Damage</td>
-                                    <td>+5% Shorter Cooldown<br>+800-935 Attack<br>+1700-1815 Crit Damage</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="3" class="sub-info">Information: Friendliest set, with no side effect</td>
-                                </tr>
-                                <tr>
-                                    <td>Wraithmind (dogshit)</td>
-                                    <td>Make your FPS drop</td>
-                                    <td>Who cares</td>
+                                    <td><strong>2 pieces:</strong> +5 SV per 5s.</td>
+                                    <td>Friendliest set.</td>
                                 </tr>
                             </table>
                         </div>
                     </div>
 
                     <div id="gl-accessory" class="tab-panel">
-                        <p class="info-text">Note: Have to use with 4 pieces because set bonus from 2 pieces not worth</p>
                         <div class="table-wrapper">
                             <table>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Information</th>
-                                    <th>Option Refinement (In order of priority)</th>
-                                </tr>
-                                <tr>
-                                    <td>Kent’s Ambition</td>
-                                    <td>- The best accessory set for Dhana.<br>- Giving 8% Armor Break. => Have more SD Valor.</td>
-                                    <td>+7% Armor Break<br>+5% Attack Speed<br>+8-10% Crit Rate<br>Any (Max Stamina, Agility are good choices)</td>
-                                </tr>
-                                <tr>
-                                    <td>Rosca’s Destined</td>
-                                    <td>- Shouldn’t use this since Dhana has lots of ASPD buff sources after 2nd Awakening.</td>
-                                    <td>+3% Armor Break<br>+5% Attack Speed<br>+6-8% Crit Rate<br>Any (Max Stamina, Agility)</td>
-                                </tr>
-                                <tr>
-                                    <td>Io’s Memoir</td>
-                                    <td>- The worst choice for endgame build.<br>Give less stat than the two above.<br>A good temporary choice for newbies to replace CD accessories before getting Kent set.</td>
-                                    <td>+7% Armor Break<br>+3% Attack Speed<br>+3000-3300 Crit Damage<br>Any (Evade, Crit Resist)</td>
-                                </tr>
+                                <tr><th>Name</th><th>Information</th><th>Option Refinement</th></tr>
+                                <tr><td>Kent’s Ambition</td><td>The best accessory set for Dhana. Giving 8% Armor Break.</td><td>+7% AB, +5% AS, +8-10% Crit Rate</td></tr>
+                                <tr><td>Rosca’s Destined</td><td>Shouldn’t use this since Dhana has lots of ASPD buffs.</td><td>+3% AB, +5% AS, +6-8% Crit Rate</td></tr>
                             </table>
                         </div>
                     </div>
@@ -189,49 +151,19 @@
                     <div id="gl-spirit" class="tab-panel">
                         <div class="table-wrapper">
                             <table>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Information</th>
-                                    <th>Option Refinement (In order of priority)</th>
-                                </tr>
-                                <tr>
-                                    <td>Soul Spirit: Desire of Justice (Black Spirit)</td>
-                                    <td>- Current best spirit for raids.</td>
-                                    <td>Auto generate option when it levels up.</td>
-                                </tr>
-                                <tr>
-                                    <td>Soul Spirit: Faith (Blue Spirit)</td>
-                                    <td>- Stronger than Healing, even stronger than Desire of Justice in Helix F36-40.<br>- Need quite a large amount of EXP to level max.<br>- High uptime when used with Pool armor set.</td>
-                                    <td>When receive damage (30% Rate):<br>+30% More DMG: Boss/Named<br>+15% More DMG: Boss/Named<br>+5% More DMG: Boss/Named<br>For 10 seconds.<br>+5% More DMG: Boss/Named</td>
-                                </tr>
-                                <tr>
-                                    <td>Soul Spirit: Healing (Yellow Spirit)</td>
-                                    <td>- Similar effectiveness to Blue Spirit.<br>- Good for newbies to use as a temporary spirit.<br>- Need a small amount of EXP to level max.</td>
-                                    <td>Auto generate option when it levels up.</td>
-                                </tr>
+                                <tr><th>Name</th><th>Information</th></tr>
+                                <tr><td>Desire of Justice</td><td>Current best spirit for raids.</td></tr>
+                                <tr><td>Faith (Blue)</td><td>Stronger in Helix F36-40. High uptime with Pool set.</td></tr>
                             </table>
                         </div>
                     </div>
 
                     <div id="gl-rosca" class="tab-panel">
-                        <p class="info-text">- 2 AB lines is a must for BIS setup.<br>- Without passive Lugman AR, you can do 1 AB 1 AS.</p>
                         <div class="table-wrapper">
                             <table>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Best Option</th>
-                                    <th>3rd Alternative Option</th>
-                                </tr>
-                                <tr>
-                                    <td>Esperanza Belt</td>
-                                    <td>+5% More DMG: Boss/Named<br>+2200-2500 Crit Damage<br>+2% Armor Break</td>
-                                    <td>+2% Attack Speed<br>+25% Super Armor Break</td>
-                                </tr>
-                                <tr>
-                                    <td>Esperanza Bracelet</td>
-                                    <td>+5% More DMG: Boss/Named<br>+2200-2500 Crit Damage<br>+2% Armor Break</td>
-                                    <td>+2% Attack Speed<br>+25% Super Armor Break</td>
-                                </tr>
+                                <tr><th>Name</th><th>Best Option</th><th>3rd Alternative</th></tr>
+                                <tr><td>Esperanza Belt</td><td>+5% Boss DMG, +2200-2500 CD, +2% AB</td><td>+2% AS</td></tr>
+                                <tr><td>Esperanza Bracelet</td><td>+5% Boss DMG, +2200-2500 CD, +2% AB</td><td>+2% AS</td></tr>
                             </table>
                         </div>
                     </div>
@@ -244,83 +176,27 @@
             
             <div class="tabs-container">
                 <div class="tabs-nav">
-                    <button class="tab-link active" onclick="openTab(event, 'evolved-weapon')">Weapon</button>
+                    <button class="tab-link" onclick="openTab(event, 'evolved-weapon')">Weapon</button>
                     <button class="tab-link" onclick="openTab(event, 'evolved-armor')">Armor</button>
                 </div>
 
                 <div class="tabs-content">
-                    <div id="evolved-weapon" class="tab-panel active">
+                    <div id="evolved-weapon" class="tab-panel">
                         <div class="table-wrapper">
                             <table>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Effect</th>
-                                    <th>Option Refinement (In order of priority)</th>
-                                </tr>
-                                <tr>
-                                    <td>Ego Sword</td>
-                                    <td>Summon 2 additional Shadow Clones when summoning. (Each clone deals 0.6x Dhana Skill Damage)</td>
-                                    <td>+6% Armor Break<br>+18% More DMG: Boss / Named<br>+6% Attack Speed<br>+4500-4700 Crit Damage</td>
-                                </tr>
-                                <tr>
-                                    <td>Ganjang Makya</td>
-                                    <td>Summon Enhanced Light and Dark attack on hit</td>
-                                    <td>+6% Armor Break<br>+18% More DMG: Boss / Named<br>+6% Attack Speed<br>+4500-4700 Crit Damage</td>
-                                </tr>
+                                <tr><th>Name</th><th>Effect</th><th>Option Refinement</th></tr>
+                                <tr><td>Ego Sword</td><td>Summon 2 additional Shadow Clones. Best weapon.</td><td>+6% AB, +18% Boss DMG, +4500-4700 CD</td></tr>
+                                <tr><td>Ganjang Makya</td><td>Enhanced Light and Dark attack on hit. Weaker.</td><td>+6% AB, +18% Boss DMG, +4500-4700 CD</td></tr>
                             </table>
                         </div>
-                        <p class="info-text">Information: Ego Sword is currently the best weapon for outstanding damage potential. Ganjang Makya is much weaker than Ego Sword.</p>
                     </div>
 
                     <div id="evolved-armor" class="tab-panel">
                         <div class="table-wrapper">
                             <table>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Effect</th>
-                                    <th>Option Refinement (In order of priority)</th>
-                                </tr>
-                                <tr>
-                                    <td>Corrupted Vacunium (Pool set)</td>
-                                    <td><strong>2 pieces:</strong> Summon 1 blood pool dealing damage to you and enemy. (can crit)<br>
-                                    <strong>4 pieces:</strong> Summon additional blood pool dealing damage to you and enemy (total 2 pools)</td>
-                                    <td>+5% Shorter Cooldown<br>+935-1030 Attack<br>+1815-2228 Crit Damage</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="3" class="sub-info">Information: An all round armor set: - Each pool deals 4 hits. - It has decent DPS; - Help proc brooches that are related to hit or receive Crit damage: Penetration, Troll…</td>
-                                </tr>
-                                <tr>
-                                    <td>Desire Desire (Desire set) W name 🤡</td>
-                                    <td><strong>2 pieces:</strong> +4% Damage when you are in Desire Awakening. Decrease 4% current HP/s<br>
-                                    <strong>4 pieces:</strong> +6% Damage when you are in Desire Awakening (10% Damage Total). Decrease 4% current HP/s (-8% HP/s)</td>
-                                    <td>+5% Shorter Cooldown<br>+935-1030 Attack<br>+1815-2228 Crit Damage</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="3" class="sub-info">Information: Stronger than Corrupted Vacunium but painful to play. Help proc brooches that are related to receive damage (not crit): Backstep, Fury…</td>
-                                </tr>
-                                <tr>
-                                    <td>Silence Void (Reversed set)</td>
-                                    <td><strong>2 pieces:</strong> +7% Damage - Your Control is reversed periodically. (5sec normal 5sec dumb)<br>
-                                    <strong>4 pieces:</strong> +8% Damage (15% Damage Total) - Your Control is reversed irregularly. (sometimes normal sometimes dumb)</td>
-                                    <td>+5% Shorter Cooldown<br>+935-1030 Attack<br>+1815-2228 Crit Damage</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="3" class="sub-info">Information: Highest damage potential set but not for skill issue players (Ranking mainly)</td>
-                                </tr>
-                                <tr>
-                                    <td>Tenacity Soul (EX set)</td>
-                                    <td><strong>2 pieces:</strong> +5 SV per 5 seconds<br>
-                                    <strong>4 pieces:</strong> Increase ~ 10000% EX Damage</td>
-                                    <td>+5% Shorter Cooldown<br>+935-1030 Attack<br>+1815-2228 Crit Damage</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="3" class="sub-info">Information: Friendliest set, no side effect (EX1 dmg+ only)</td>
-                                </tr>
-                                <tr>
-                                    <td>Sanctum Ghost (dogshit)</td>
-                                    <td>Make your FPS drop</td>
-                                    <td>Who cares</td>
-                                </tr>
+                                <tr><th>Name</th><th>Effect</th><th>Option Refinement</th></tr>
+                                <tr><td>Corrupted Vacunium</td><td>2 blood pools. Good for proccing brooches.</td><td>+5% CD, +935-1030 ATK, +1815-2228 CD</td></tr>
+                                <tr><td>Desire Desire</td><td>+10% Damage. High risk, high reward.</td><td>+5% CD, +935-1030 ATK, +1815-2228 CD</td></tr>
                             </table>
                         </div>
                     </div>
@@ -330,264 +206,57 @@
 
         <section id="akashic" class="card">
             <h2>Akashic Record</h2>
-            <p class="info-text">(In order of priority from left to right - Best Setup -> 2nd)</p>
             <div class="table-wrapper">
                 <table>
-                    <tr>
-                        <th>Role</th>
-                        <th>Description</th>
-                        <th>Recommended Content</th>
-                    </tr>
-                    <tr>
-                        <td><span class="highlight-yellow">BIS</span></td>
-                        <td>+10% Agility for 120 seconds.<br>+5% Damage taken to all monsters in 20 seconds. (CD: 120s)</td>
-                        <td>All raids</td>
-                    </tr>
-                    <tr>
-                        <td>Replacement</td>
-                        <td>+10% Shorter Cooldown<br>+10% Attack Speed<br>+100% Damage taken<br>Those buff above lasts for 10 seconds (CD: 120s)</td>
-                        <td>Ranking</td>
-                    </tr>
-                    <tr>
-                        <td>Replacement</td>
-                        <td>+5000 Crit Damage<br>+30000 Shield & 30% Damage Reduction<br>Those buff above lasts for 30 seconds (CD: 120s)</td>
-                        <td>Hard raids (Rugman, Rosca)</td>
-                    </tr>
-                    <tr>
-                        <td>Replacement</td>
-                        <td>+10% More damage to Boss/Named<br>+5000 Crit Damage<br>Those buff above lasts for 10 seconds (CD: 120s)</td>
-                        <td>All raids</td>
-                    </tr>
+                    <tr><th>Role</th><th>Description</th><th>Recommended Content</th></tr>
+                    <tr><td><span class="highlight-yellow">BIS</span></td><td>+10% Agility, +5% Damage taken to monsters.</td><td>All raids</td></tr>
+                    <tr><td>Replacement</td><td>+10% CD, +10% AS, +100% Damage taken for 10s.</td><td>Ranking</td></tr>
                 </table>
             </div>
         </section>
 
         <section id="soulmate" class="card">
             <h2>Soulmate & Artifact</h2>
-            <p class="info-text">Ranked based on Damage Potential</p>
-            
             <h3>Endgame</h3>
             <div class="table-wrapper">
                 <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Information</th>
-                    </tr>
-                    <tr>
-                        <td><span class="highlight-yellow">Lugman</span></td>
-                        <td>- The current BiS Soulmate for Raid Contents due to the high stat provided.</td>
-                    </tr>
-                    <tr>
-                        <td>Neb</td>
-                        <td>- Less stat than Lugman, how much worse it is depends on which weapon’s overclocking level you at.</td>
-                    </tr>
-                    <tr>
-                        <td>Miriam</td>
-                        <td>- Increase 10 SV per 10 seconds (only in SSS tier).<br>- Not a good pet for Damage Potential since Dhana (or any 2nd Advanced characters) don't need SV for EX Skill</td>
-                    </tr>
-                    <tr>
-                        <td>Catherine</td>
-                        <td>- Has decent stat.<br>- Instantly resurrect in mazes (90 seconds cooldown). This is really useful in “unable to revive” contents like Advancing Helix.</td>
-                    </tr>
-                    <tr>
-                        <td>Arua</td>
-                        <td>- Has decent stat.<br>- Recover 5% stamina per second. Very useful in the new Lugman raid for new players suffering from lacking stamina.</td>
-                    </tr>
-                </table>
-            </div>
-            <p class="info-text">Other pets are not worth using. (Unnecessary and lower stat compared to listed Soulmates above)</p>
-
-            <h3>Early Game</h3>
-            <div class="table-wrapper">
-                <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Information</th>
-                    </tr>
-                    <tr>
-                        <td>Neb</td>
-                        <td>- Easy and powerful Soulmate you can get in the Early Phase of the game.<br>- Better than from S to SS tier. (You can craft 1 Neb box for 12 Desire Fragment of Lost Light in Arcadia Realm - Sedurin)</td>
-                    </tr>
-                    <tr>
-                        <td>Catherine</td>
-                        <td>- Give similar stat to Neb.<br>- Instantly resurrect in mazes without taking a self resurrection limit (120 seconds cooldown).</td>
-                    </tr>
-                    <tr>
-                        <td>Lugman</td>
-                        <td>- Give less stat than the two above but you will need to grind Lugman anyways since she is the strongest Soulmate when she reaches SSS tier.</td>
-                    </tr>
-                    <tr>
-                        <td>Arua</td>
-                        <td>- Decent choice due to high Armor Break.</td>
-                    </tr>
-                    <tr>
-                        <td>Chii</td>
-                        <td>- Best A-Base tier Soulmate.</td>
-                    </tr>
-                </table>
-            </div>
-
-            <h3>Artifact</h3>
-            <div class="table-wrapper">
-                <table>
-                    <tr>
-                        <th>Slot</th>
-                        <th>BIS</th>
-                        <th>Information</th>
-                    </tr>
-                    <tr><td>Blue</td><td></td><td></td></tr>
-                    <tr><td>Red</td><td></td><td></td></tr>
-                    <tr><td>Effect</td><td></td><td>Any effect works</td></tr>
+                    <tr><th>Name</th><th>Information</th></tr>
+                    <tr><td><span class="highlight-yellow">Lugman</span></td><td>The current BiS Soulmate for Raid Contents.</td></tr>
+                    <tr><td>Neb</td><td>Easy and powerful for Early Phase.</td></tr>
+                    <tr><td>Catherine</td><td>Instantly resurrect in mazes. Useful for Helix.</td></tr>
                 </table>
             </div>
         </section>
 
         <section id="skill-detail" class="card">
             <h2>Skill Detail</h2>
-
-            <h3>Active Skill (Red Weapon)</h3>
             <div class="table-wrapper">
                 <table>
                     <tr><th>Name</th><th>SoulPlus</th><th>Information</th></tr>
-                    <tr><td>Shadow Whirl</td><td>Additional Attack</td><td>Filler Skill</td></tr>
-                    <tr><td>Nimble Pierce</td><td>Drain</td><td>Healing Skill<br>- Recover HP at the end of animation. (Useful in high pressure raid)<br>- Can be used to drag mobs close. (Useful in Violent Sun Hero)<br>- Hard Armor.</td></tr>
-                    <tr><td>Nimble Pierce</td><td>Sharpness</td><td>Sharpness Debuff<br>- Not useful because we have too many Sharpness now.<br>- Can be used to drag mobs close.<br>- Hard Armor.<br>- Has slightly more damage than Drain.</td></tr>
-                    <tr><td>Silent Leap</td><td>Guided Whirlwind</td><td>Filler Skill<br>- Honing attack.<br>- Decent damage.</td></tr>
-                    <tr><td>Dark Breaker</td><td>Explosion</td><td>Main Damage Skill<br>- Second highest damage skill.<br>- Can be copied by Shadow Clones</td></tr>
-                    <tr><td>Reinforcement</td><td></td><td>Self Buff Skill (60 seconds duration)<br>- +10% Critical Rate<br>- +5% Damage</td></tr>
-                    <tr><td>Devour</td><td>Sharpness</td><td>Filler Skill, Sharpness Debuff</td></tr>
-                    <tr><td>Rising Specter</td><td></td><td>High Damage Skill<br>- Put you into the air.<br>- Hard Armor. (But its animation is really short)</td></tr>
-                    <tr><td>Momentary Chase</td><td>Assassination</td><td>Main Damage Skill<br>- Burst Skill with quick cast time.<br>- Hard Armor.</td></tr>
-                    <tr><td>Falling Star</td><td></td><td>1st Aerial Skill<br>- Put you back to the ground. (Really easy to go through boss or even get teleport if you stay too close to boss or having high ping)</td></tr>
-                    <tr><td>Dreamscape</td><td>Deep In A Dream</td><td>Self/Party Buff Skill (50 seconds duration)<br>- +15% Armor Break (5% for Teammates)<br>- +10% Attack Speed (5% for Teammates)<br>- Deal some damage.<br>- Can be used to pull enemies close to the middle of the skill.</td></tr>
-                    <tr><td>Finis Temporis</td><td>Apocalypse</td><td>Main Damage Skill<br>- Invincible during cast and ~3 seconds after animation is done.<br>- Can pull enemies close to the middle of the skill.</td></tr>
-                    <tr><td>Rash Impale</td><td></td><td>2nd Aerial Skill<br>- Filler skill.</td></tr>
-                    <tr><td>Rampage Specter</td><td></td><td>Main Damage Skill<br>- Burst Skill. (Total Hit: 8)</td></tr>
-                    <tr><td>Chain Pierce</td><td></td><td>Main Damage Skill<br>- Have to wait a bit for it to deal damage.</td></tr>
-                    <tr><td>Blade Waltz</td><td></td><td>Main Damage Skill<br>- Your highest damage skill.<br>- Can be copied by Shadow Clones.<br>- Hard Armor.<br>- Can move during animation.<br>- Total Hit can be increased by Attack Speed. (Max: 75 Hit)</td></tr>
-                    <tr><td>Shadow Blade</td><td></td><td>Main Damage Skill, Sharpness Debuff<br>- Create a temporary Shadow Clone for 1s after use.</td></tr>
-                    <tr><td>Hidden Blade</td><td></td><td>3rd Aerial Skill, Sharpness Debuff<br>- Have good damage.</td></tr>
-                    <tr><td>Ars Nova: Mandala</td><td></td><td>Filler Skill<br>- Invincible during cast.<br>- Decent damage but long cast time. (Only used when in tense situation)</td></tr>
+                    <tr><td>Blade Waltz</td><td>-</td><td>Highest damage skill. Can be copied by clones. Max 75 hits.</td></tr>
+                    <tr><td>Finis Temporis</td><td>Apocalypse</td><td>Invincible during cast. Main damage skill.</td></tr>
+                    <tr><td>Momentary Chase</td><td>Assassination</td><td>Burst skill, quick cast, Hard Armor.</td></tr>
                 </table>
             </div>
-
-            <h3>Alternative Skill</h3>
-            <div class="table-wrapper">
-                <table>
-                    <tr><th>Name</th><th>Information</th></tr>
-                    <tr><td>Infinity Brandish</td><td>Filler Skill<br>- Decent damage</td></tr>
-                </table>
-            </div>
-            <p class="info-text">Gold Weapon: Work In Progress (never do :P)</p>
-
-            <h3>Passive Skill</h3>
+            
+            <h3>Passive Skills</h3>
             <div class="table-wrapper">
                 <table>
                     <tr><th>Name</th><th>Level</th><th>Information</th></tr>
-                    <tr><td>Basic Attack Mastery</td><td>1/5</td><td>- There is no need to increase basic attack damage in raids.</td></tr>
-                    <tr><td>SoulStrike Mastery</td><td>3/3</td><td>- Summon all your clones.<br>- Clones will disappear after 20 seconds (60s at level 3).<br>- Its skill deals 0.2x equal to Dhana’s Damage.</td></tr>
-                    <tr><td>Dodge</td><td>1/1</td><td>- Give Iframe during dash (Absolute Invincible if timing right) and an extra short Iframe after animation ends.<br>- Can be used to cancel some of your skills.</td></tr>
-                    <tr><td>Tumble</td><td>1/3</td><td>- Iframe during animation.</td></tr>
-                    <tr><td>Dash</td><td>2/2(1/2)</td><td>- Increasing its level only helps you move faster so it is not necessary.</td></tr>
-                    <tr><td>Retaliation</td><td>1/3</td><td>- Help you get up if you are knocked down.<br>- Give an Iframe after animation for 3 seconds.</td></tr>
-                    <tr><td>Dash Attack</td><td>1/1</td><td>- Extremely useful when doing ice balls mech in Violent Sun Hero.</td></tr>
-                    <tr><td>Soul Evasion</td><td>0/3(1/3)</td><td>- No need but you can have it 1/3 if you want to.</td></tr>
-                    <tr><td>SoulDash Attack</td><td>0/1</td><td>Not important.</td></tr>
-                    <tr><td>Stamina Mastery</td><td>0/5(5/5)</td><td>Mostly you won’t run out of stamina but you can level this if you need. (Recommended 5/5 for new player)</td></tr>
-                    <tr><td>Sharp Strike</td><td>3/3</td><td>- Good source of gaining SV and giving some Super Armor Break.</td></tr>
-                    <tr><td>Dance of Delusion</td><td>3/3</td><td>- +50% Base Attack<br>- +300 Accuracy</td></tr>
-                    <tr><td>Shape of Moments</td><td>1/1</td><td>- Automatically recover SG. (+3 SG/s)<br>- Recover SG when doing basic attacks on enemies.<br>- Recover SG when you use skills that your clones can copy.</td></tr>
-                    <tr><td>Harmony Mind</td><td>1/1</td><td>- +10% Attack Speed<br>- +3000 Crit Damage</td></tr>
-                </table>
-            </div>
-
-            <h3>Break Skill</h3>
-            <div class="table-wrapper">
-                <table>
-                    <tr><th>Name</th><th>Information</th></tr>
-                    <tr><td>Frenzy</td><td>- Provides Invincible in a short time.<br>- Also gives buff but isn’t worth using. Keep your SV to use Desire Awakening.</td></tr>
-                    <tr><td>Desire Awakening</td><td>- Provides Invincible for 2 seconds (You can see under your HP/SG bars)<br>- You will deal the maximum amount of your attack.<br>- You gain those stats in 120 seconds: +20% Attack Damage, +20% Attack Speed, +30% Agility, -20% SG Consumption<br>- Finis Temporis and Chain Pierce are enhanced.</td></tr>
-                    <tr><td>Orbital Blade</td><td>- Give Absolute Invincible during animation ~ 8.5 seconds.<br>- Has highest damage (86000% damage) with 180 seconds cooldown.</td></tr>
+                    <tr><td>SoulStrike Mastery</td><td>3/3</td><td>Summon all clones for 60s. Deals 0.2x Dhana's damage.</td></tr>
+                    <tr><td>Harmony Mind</td><td>1/1</td><td>+10% Attack Speed, +3000 Crit Damage.</td></tr>
                 </table>
             </div>
         </section>
 
         <section id="build" class="card">
             <h2>Kent’s Ambition Build</h2>
-            
-            <h3>Title</h3>
-            <p><strong>Do it - Do not do it</strong><br>
-            2nd: Sensational - Racer/Knight in White.</p>
-            <p class="info-text">All stats written in Green color are base stats that are shown in your Profile.</p>
-
-            <h3>Equipment Setup</h3>
+            <p><strong>Title:</strong> Do it - Do not do it / Sensational.</p>
             <div class="table-wrapper">
                 <table>
-                    <tr>
-                        <th>Category</th>
-                        <th>Item</th>
-                        <th>Tag Details</th>
-                        <th>Familiar / Spirit</th>
-                    </tr>
-                    <tr>
-                        <td><strong>Weapon</strong></td>
-                        <td>Ego Sword</td>
-                        <td><strong>Rebellion (BIS):</strong> Highest stat tag.<br><strong>Dawn:</strong> Craftable at Lugman NPC.</td>
-                        <td><strong>Familiar:</strong> 4x Hero Radiant Desire<br><strong>Spirit:</strong> Soul Spirit: Desire of Justice</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Armor</strong></td>
-                        <td>Desire Desire (Recommended)<br>Tenacity Soul (Friendly)<br>Silence Void (Not recommended unless confident)</td>
-                        <td><strong>Daybreak (BIS):</strong> Only tag giving Boss DMG.<br><strong>Bleak:</strong> Highest Attack tag.<br><strong>Drawing the Line:</strong> Highest Crit Damage.</td>
-                        <td>Type A: Sacred Seal of Determination<br>Type B: Sacred Seal of Wisdom<br>Type C: Sacred Seal of Courage<br>Type D: Sacred Seal of Enlightenment</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Accessories</strong></td>
-                        <td>Kent’s Ambition</td>
-                        <td><strong>Twilight (BIS):</strong> Only tag giving Boss DMG.<br><strong>Within Darkness:</strong> Highest Attack.<br><strong>Single Blow:</strong> Highest Crit Damage.</td>
-                        <td>N/A</td>
-                    </tr>
-                </table>
-            </div>
-
-            <h3>Brooch Setup</h3>
-            <div class="table-wrapper">
-                <table>
-                    <tr>
-                        <th>Slot</th>
-                        <th>Set</th>
-                        <th>Brooch</th>
-                        <th>Brooch</th>
-                        <th>Note</th>
-                    </tr>
-                    <tr>
-                        <td>Hat</td>
-                        <td>SD</td>
-                        <td>Valour / Nautilus / Enlighten</td>
-                        <td>Valour / Any Def / Enlighten</td>
-                        <td>Best set for Hat.</td>
-                    </tr>
-                    <tr>
-                        <td>Top</td>
-                        <td>FOT / SD</td>
-                        <td>Ballista / Attrition / Recon</td>
-                        <td>Valour / Nautilus / Enlighten</td>
-                        <td>If you don’t have Lugman use the SD set.</td>
-                    </tr>
-                    <tr>
-                        <td>Gloves</td>
-                        <td>SD</td>
-                        <td>Valour / Nautilus / Enlighten</td>
-                        <td>Valour / Nautilus / Enlighten</td>
-                        <td>Extra Boss DMG. 3 Nautilus is better than Barrier since our DMG Res is low. Help your rotation smoother.</td>
-                    </tr>
-                    <tr>
-                        <td>Bottom</td>
-                        <td>Broken</td>
-                        <td>Valou...</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                    <tr><th>Slot</th><th>Set</th><th>Brooch 1</th><th>Brooch 2</th></tr>
+                    <tr><td>Hat</td><td>SD</td><td>Valour / Nautilus / Enlighten</td><td>Valour / Any Def / Enlighten</td></tr>
+                    <tr><td>Top</td><td>FOT / SD</td><td>Ballista / Attrition / Recon</td><td>Valour / Nautilus / Enlighten</td></tr>
                 </table>
             </div>
         </section>
@@ -595,32 +264,41 @@
     </div>
 
     <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Tự động tìm tất cả các mục có Tabs và kích hoạt tab đầu tiên
+        const tabSections = document.querySelectorAll('.tabs-section');
+        tabSections.forEach(section => {
+            const firstTab = section.querySelector('.tab-link');
+            if (firstTab) {
+                firstTab.click();
+            }
+        });
+    });
+
     function openTab(evt, tabName) {
-      // Khai báo biến
-      var i, tabpanel, tablinks;
+        // Chỉ tìm trong vùng container chứa tab vừa click
+        const container = evt.currentTarget.closest('.tabs-container');
+        
+        // Ẩn panel và xóa active của tab cũ TRONG CÙNG VÙNG
+        const tabpanels = container.querySelectorAll('.tab-panel');
+        tabpanels.forEach(panel => {
+            panel.style.display = "none";
+            panel.classList.remove('active');
+        });
 
-      // Lấy tất cả các panel nội dung và ẩn chúng đi
-      tabpanel = document.getElementsByClassName("tab-panel");
-      for (i = 0; i < tabpanel.length; i++) {
-        tabpanel[i].style.display = "none";
-      }
+        const tablinks = container.querySelectorAll('.tab-link');
+        tablinks.forEach(link => {
+            link.classList.remove('active');
+        });
 
-      // Lấy tất cả các nút tab-link và xóa class 'active'
-      tablinks = document.getElementsByClassName("tab-link");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-      }
-
-      // Hiển thị panel nội dung của tab được chọn
-      document.getElementById(tabName).style.display = "block";
-      // Thêm class 'active' vào nút đã nhấp
-      evt.currentTarget.className += " active";
+        // Hiển thị tab được chọn
+        const targetPanel = document.getElementById(tabName);
+        if (targetPanel) {
+            targetPanel.style.display = "block";
+            targetPanel.classList.add('active');
+        }
+        evt.currentTarget.classList.add('active');
     }
-
-    // Tùy chọn: Đảm bảo tab đầu tiên hiển thị mặc định khi trang load (nếu cần)
-     window.onload = function() {
-       document.querySelector('.tabs-section:first-child .tab-link:first-child').click();
-     };
     </script>
 </body>
 </html>
