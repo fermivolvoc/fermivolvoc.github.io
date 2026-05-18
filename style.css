@@ -1,0 +1,209 @@
+/* style.css - Dark Mode Gaming Theme cho Dhana Guide */
+
+:root {
+    --bg-main: #0B0E14; /* Deep dark background */
+    --bg-card: #151A22; /* Card background */
+    --accent: #9A66F9; /* Dhana Purple */
+    --accent-glow: rgba(154, 102, 249, 0.4);
+    --text-main: #E2E8F0; /* Light gray text */
+    --text-muted: #94A3B8;
+    --yellow-highlight: #FBBF24; /* Highlight theo yêu cầu trong doc */
+    --border-color: #2D3748;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--accent);
+}
+
+header h1 {
+    font-size: 3rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 20px var(--accent-glow);
+}
+
+.status-badge {
+    background-color: #059669;
+    color: white;
+    display: inline-block;
+    padding: 0.4rem 1.2rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 10px rgba(5, 150, 105, 0.4);
+}
+
+.contact {
+    color: var(--text-muted);
+}
+
+/* Cards & Sections */
+.card {
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+    border-color: var(--accent);
+}
+
+h2 {
+    color: var(--accent);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.8rem;
+    margin-top: 0;
+    font-size: 1.8rem;
+}
+
+h3 {
+    color: #F8FAFC;
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+}
+
+h3::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 20px;
+    background-color: var(--accent);
+    margin-right: 10px;
+    border-radius: 3px;
+}
+
+/* Typography & Highlights */
+.highlight-yellow {
+    color: var(--yellow-highlight);
+    font-weight: 700;
+}
+
+.info-text {
+    font-style: italic;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-top: 0.8rem;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 0.8rem;
+    border-left: 4px solid var(--text-muted);
+    border-radius: 0 4px 4px 0;
+}
+
+.sub-info {
+    font-style: italic;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Synergy Box Custom */
+.synergy-box {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px dashed var(--accent);
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 1rem 0;
+}
+
+.skill-tags span {
+    background-color: var(--accent);
+    color: #fff;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.debuff-text {
+    font-weight: bold;
+    color: #EF4444; /* Đỏ để nhấn mạnh debuff */
+}
+
+/* Tables */
+.table-wrapper {
+    overflow-x: auto;
+    margin-top: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px var(--border-color);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(0, 0, 0, 0.15);
+    min-width: 600px;
+}
+
+th, td {
+    padding: 1.2rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background-color: rgba(154, 102, 249, 0.15);
+    color: var(--accent);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+tr:hover td {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    .card {
+        padding: 1rem;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+    th, td {
+        padding: 0.8rem 0.5rem;
+    }
+}
