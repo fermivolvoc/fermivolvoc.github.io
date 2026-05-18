@@ -74,6 +74,17 @@ header h1 {
     border-color: var(--accent);
 }
 
+/* Kiểu dáng cho section chứa Tabs để nối viền liền mạch */
+.tabs-section {
+    padding: 0; /* Xóa padding card để tabs-nav nối viền */
+    overflow: hidden; /* Bo góc có tác dụng trên tabs-nav */
+}
+
+.tabs-section h2 {
+    padding: 1.5rem 2rem 0.8rem; /* Đặt lại padding cho title */
+    margin: 0;
+}
+
 h2 {
     color: var(--accent);
     border-bottom: 1px solid var(--border-color);
@@ -206,4 +217,87 @@ tr:last-child td {
     th, td {
         padding: 0.8rem 0.5rem;
     }
+    /* Tabs trên mobile xếp chồng lên nhau hoặc cuộn ngang */
+    .tabs-nav {
+        flex-wrap: wrap;
+    }
+    .tab-link {
+        flex-grow: 1;
+        padding: 1rem;
+    }
+}
+
+/* =========================================
+   MỚI: Phong cách cho giao diện Tabs (Giống ảnh 2)
+   ========================================= */
+
+/* Thanh điều hướng Tab */
+.tabs-nav {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.1); /* Nền tối hơn một chút cho navigation bar */
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  margin-top: 0.5rem;
+}
+
+/* Nút Tab-Link */
+.tab-link {
+  background-color: inherit;
+  color: var(--text-muted);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 1.2rem 2rem;
+  transition: 0.3s;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: none; /* Không viết hoa toàn bộ */
+  border-right: 1px solid var(--border-color); /* Đường kẻ phân cách giữa các tab */
+  flex-grow: 1; /* Để các tab chia đều chiều rộng card */
+  text-align: center;
+}
+
+/* Tab link cuối cùng xóa đường kẻ phân cách */
+.tab-link:last-child {
+  border-right: none;
+}
+
+/* Hiệu ứng hover cho tab */
+.tab-link:hover {
+  background-color: rgba(154, 102, 249, 0.1);
+  color: var(--text-main);
+}
+
+/* Phong cách cho tab đang được chọn (Active) - Giống ảnh 2 */
+.tab-link.active {
+  background-color: var(--accent); /* Màu tím đậm làm nền */
+  color: #FFFFFF; /* Chữ trắng */
+}
+
+/* Container nội dung Tab */
+.tabs-content {
+  padding: 2rem; /* Trả lại padding card cho nội dung bên trong */
+  background-color: var(--bg-card); /* Đảm bảo nội dung có nền card */
+}
+
+/* Mặc định ẩn tất cả các panel nội dung tab */
+.tab-panel {
+  display: none;
+  animation: fadeEffect 0.5s; /* Hiệu ứng fade khi chuyển tab */
+}
+
+/* Hiển thị panel nội dung của tab đang active */
+.tab-panel.active {
+  display: block;
+}
+
+/* Xóa h3 title bên trong tab panel vì tiêu đề lớn h2 đã nói lên mục này */
+.tab-panel h3 {
+  display: none;
+}
+
+/* Thêm hiệu ứng fade cho mượt */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
