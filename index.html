@@ -9,14 +9,12 @@
 </head>
 <body>
     <div class="container">
-        <!-- Header Section -->
         <header>
             <h1>Volvoc's Dhana Guide</h1>
             <div class="status-badge">Current Status: UP TO DATE</div>
             <p class="contact">If you have any suggest or question, contact me on discord: <strong>fermivolvoc</strong></p>
         </header>
 
-        <!-- Notice Section -->
         <section id="notice" class="card">
             <h2>Notice & Credits</h2>
             <p><strong>Credits:</strong> Azura, Liquid, thunder.</p>
@@ -26,7 +24,6 @@
             </ul>
         </section>
 
-        <!-- Terminology Section -->
         <section id="terminology" class="card">
             <h2>Terminology</h2>
             <p><em>(My own definition for better explanation, not game definition)</em></p>
@@ -56,7 +53,6 @@
             </div>
         </section>
 
-        <!-- Party Synergy Section -->
         <section id="synergy" class="card">
             <h2>Party Synergy</h2>
             <div class="synergy-box">
@@ -73,240 +69,265 @@
             </div>
         </section>
 
-        <!-- GL Equipment Section -->
-        <section id="gl-equipment" class="card">
+        <section id="gl-equipment" class="card tabs-section">
             <h2>GL Equipment</h2>
             
-            <h3>Weapon</h3>
-            <div class="table-wrapper">
-                <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Effect</th>
-                        <th>Option Refinement (In order of priority)</th>
-                    </tr>
-                    <tr>
-                        <td>Sealed Stand of Darkness</td>
-                        <td>Summon additional Shadow Clone when summoning. (x0.6 Dhana Skill Damage)</td>
-                        <td>+6% Armor Break<br>+15% More DMG: Boss / Named<br>+6% Attack Speed<br>+3700-3949 Crit Damage</td>
-                    </tr>
-                    <tr>
-                        <td>Sealed Lover of Gold</td>
-                        <td>Summon some Light Pillars and Dark Holes that deal damage when using skill. (no need to hit mobs)</td>
-                        <td>+6% Armor Break<br>+15% More DMG: Boss / Named<br>+6% Attack Speed<br>+3700-3949 Crit Damage</td>
-                    </tr>
-                </table>
-            </div>
-            <p class="info-text">Information: Sealed Stand of Darkness to evolve to best weapon. Sealed Lover of Gold has much less damage than but it is consistent and easier.</p>
+            <div class="tabs-container">
+                <div class="tabs-nav">
+                    <button class="tab-link active" onclick="openTab(event, 'gl-weapon')">Weapon</button>
+                    <button class="tab-link" onclick="openTab(event, 'gl-armor')">Armor</button>
+                    <button class="tab-link" onclick="openTab(event, 'gl-accessory')">Accessory</button>
+                    <button class="tab-link" onclick="openTab(event, 'gl-spirit')">Spirit</button>
+                    <button class="tab-link" onclick="openTab(event, 'gl-rosca')">Rosca Gear</button>
+                </div>
 
-            <h3>Armor</h3>
-            <div class="table-wrapper">
-                <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Effect</th>
-                        <th>Option Refinement (In order of priority)</th>
-                    </tr>
-                    <tr>
-                        <td>Corrupted Voidsteel (Pool set)</td>
-                        <td><strong>2 pieces:</strong> Summon a blood pool dealing damage to you and enemy. (can crit)<br>
-                        <strong>4 pieces:</strong> Summon additional blood pool dealing damage to you and enemy. (total 2 pools)</td>
-                        <td>+5% Shorter Cooldown<br>+800-935 Attack<br>+1700-1815 Crit Damage</td>
-                    </tr>
-                    <tr>
-                        <td colspan="3" class="sub-info">Information: An all round armor set: - Each pool deals 4 hits; - It has decent DPS; - Help proc brooches that are related to hit or receive Crit damage: Penetration, Troll…</td>
-                    </tr>
-                    <tr>
-                        <td>Eternal Desire (Desire set)</td>
-                        <td><strong>2 pieces:</strong> +4% Damage when you are in Desire Awakening. Decrease 4% current HP/s<br>
-                        <strong>4 pieces:</strong> +6% Damage when you are in Desire Awakening (10% Damage Total). Decrease 4% current HP/s (-8% HP/s)</td>
-                        <td>+5% Shorter Cooldown<br>+800-935 Attack<br>+1700-1815 Crit Damage</td>
-                    </tr>
-                    <tr>
-                        <td colspan="3" class="sub-info">Information: Stronger than Corrupted Voidsteel. Help proc brooches that are related to receive damage (not crit): Backstep, Fury…</td>
-                    </tr>
-                    <tr>
-                        <td>Void of Silence (Reversed set)</td>
-                        <td><strong>2 pieces:</strong> +7% Damage - Your Control is reversed periodically. (5sec normal 5sec dumb)<br>
-                        <strong>4 pieces:</strong> +8% Damage (15% Damage Total) - Your Control is reversed irregularly. (sometimes normal sometimes dumb)</td>
-                        <td>+5% Shorter Cooldown<br>+800-935 Attack<br>+1700-1815 Crit Damage</td>
-                    </tr>
-                    <tr>
-                        <td colspan="3" class="sub-info">Information: Highest damage potential set but not for skill issue players (Ranking mainly)</td>
-                    </tr>
-                    <tr>
-                        <td>Unyielding Soul (EX set)</td>
-                        <td><strong>2 pieces:</strong> +5 SV per 5 seconds<br>
-                        <strong>4 pieces:</strong> Increase ~ 10000% EX Damage</td>
-                        <td>+5% Shorter Cooldown<br>+800-935 Attack<br>+1700-1815 Crit Damage</td>
-                    </tr>
-                    <tr>
-                        <td colspan="3" class="sub-info">Information: Friendliest set, with no side effect</td>
-                    </tr>
-                    <tr>
-                        <td>Wraithmind (dogshit)</td>
-                        <td>Make your FPS drop</td>
-                        <td>Who cares</td>
-                    </tr>
-                </table>
-            </div>
+                <div class="tabs-content">
+                    <div id="gl-weapon" class="tab-panel active">
+                        <div class="table-wrapper">
+                            <table>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Effect</th>
+                                    <th>Option Refinement (In order of priority)</th>
+                                </tr>
+                                <tr>
+                                    <td>Sealed Stand of Darkness</td>
+                                    <td>Summon additional Shadow Clone when summoning. (x0.6 Dhana Skill Damage)</td>
+                                    <td>+6% Armor Break<br>+15% More DMG: Boss / Named<br>+6% Attack Speed<br>+3700-3949 Crit Damage</td>
+                                </tr>
+                                <tr>
+                                    <td>Sealed Lover of Gold</td>
+                                    <td>Summon some Light Pillars and Dark Holes that deal damage when using skill. (no need to hit mobs)</td>
+                                    <td>+6% Armor Break<br>+15% More DMG: Boss / Named<br>+6% Attack Speed<br>+3700-3949 Crit Damage</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <p class="info-text">Information: Sealed Stand of Darkness to evolve to best weapon. Sealed Lover of Gold has much less damage than but it is consistent and easier.</p>
+                    </div>
 
-            <h3>Accessory</h3>
-            <p class="info-text">Note: Have to use with 4 pieces because set bonus from 2 pieces not worth</p>
-            <div class="table-wrapper">
-                <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Information</th>
-                        <th>Option Refinement (In order of priority)</th>
-                    </tr>
-                    <tr>
-                        <td>Kent’s Ambition</td>
-                        <td>- The best accessory set for Dhana.<br>- Giving 8% Armor Break. => Have more SD Valor.</td>
-                        <td>+7% Armor Break<br>+5% Attack Speed<br>+8-10% Crit Rate<br>Any (Max Stamina, Agility are good choices)</td>
-                    </tr>
-                    <tr>
-                        <td>Rosca’s Destined</td>
-                        <td>- Shouldn’t use this since Dhana has lots of ASPD buff sources after 2nd Awakening.</td>
-                        <td>+3% Armor Break<br>+5% Attack Speed<br>+6-8% Crit Rate<br>Any (Max Stamina, Agility)</td>
-                    </tr>
-                    <tr>
-                        <td>Io’s Memoir</td>
-                        <td>- The worst choice for endgame build.<br>Give less stat than the two above.<br>A good temporary choice for newbies to replace CD accessories before getting Kent set.</td>
-                        <td>+7% Armor Break<br>+3% Attack Speed<br>+3000-3300 Crit Damage<br>Any (Evade, Crit Resist)</td>
-                    </tr>
-                </table>
-            </div>
+                    <div id="gl-armor" class="tab-panel">
+                        <div class="table-wrapper">
+                            <table>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Effect</th>
+                                    <th>Option Refinement (In order of priority)</th>
+                                </tr>
+                                <tr>
+                                    <td>Corrupted Voidsteel (Pool set)</td>
+                                    <td><strong>2 pieces:</strong> Summon a blood pool dealing damage to you and enemy. (can crit)<br>
+                                    <strong>4 pieces:</strong> Summon additional blood pool dealing damage to you and enemy. (total 2 pools)</td>
+                                    <td>+5% Shorter Cooldown<br>+800-935 Attack<br>+1700-1815 Crit Damage</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="sub-info">Information: An all round armor set: - Each pool deals 4 hits; - It has decent DPS; - Help proc brooches that are related to hit or receive Crit damage: Penetration, Troll…</td>
+                                }
+                                <tr>
+                                    <td>Eternal Desire (Desire set)</td>
+                                    <td><strong>2 pieces:</strong> +4% Damage when you are in Desire Awakening. Decrease 4% current HP/s<br>
+                                    <strong>4 pieces:</strong> +6% Damage when you are in Desire Awakening (10% Damage Total). Decrease 4% current HP/s (-8% HP/s)</td>
+                                    <td>+5% Shorter Cooldown<br>+800-935 Attack<br>+1700-1815 Crit Damage</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="sub-info">Information: Stronger than Corrupted Voidsteel. Help proc brooches that are related to receive damage (not crit): Backstep, Fury…</td>
+                                </tr>
+                                <tr>
+                                    <td>Void of Silence (Reversed set)</td>
+                                    <td><strong>2 pieces:</strong> +7% Damage - Your Control is reversed periodically. (5sec normal 5sec dumb)<br>
+                                    <strong>4 pieces:</strong> +8% Damage (15% Damage Total) - Your Control is reversed irregularly. (sometimes normal sometimes dumb)</td>
+                                    <td>+5% Shorter Cooldown<br>+800-935 Attack<br>+1700-1815 Crit Damage</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="sub-info">Information: Highest damage potential set but not for skill issue players (Ranking mainly)</td>
+                                </tr>
+                                <tr>
+                                    <td>Unyielding Soul (EX set)</td>
+                                    <td><strong>2 pieces:</strong> +5 SV per 5 seconds<br>
+                                    <strong>4 pieces:</strong> Increase ~ 10000% EX Damage</td>
+                                    <td>+5% Shorter Cooldown<br>+800-935 Attack<br>+1700-1815 Crit Damage</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="sub-info">Information: Friendliest set, with no side effect</td>
+                                </tr>
+                                <tr>
+                                    <td>Wraithmind (dogshit)</td>
+                                    <td>Make your FPS drop</td>
+                                    <td>Who cares</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
 
-            <h3>Spirit</h3>
-            <div class="table-wrapper">
-                <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Information</th>
-                        <th>Option Refinement (In order of priority)</th>
-                    </tr>
-                    <tr>
-                        <td>Soul Spirit: Desire of Justice (Black Spirit)</td>
-                        <td>- Current best spirit for raids.</td>
-                        <td>Auto generate option when it levels up.</td>
-                    </tr>
-                    <tr>
-                        <td>Soul Spirit: Faith (Blue Spirit)</td>
-                        <td>- Stronger than Healing, even stronger than Desire of Justice in Helix F36-40.<br>- Need quite a large amount of EXP to level max.<br>- High uptime when used with Pool armor set.</td>
-                        <td>When receive damage (30% Rate):<br>+30% More DMG: Boss/Named<br>+15% More DMG: Boss/Named<br>+5% More DMG: Boss/Named<br>For 10 seconds.<br>+5% More DMG: Boss/Named</td>
-                    </tr>
-                    <tr>
-                        <td>Soul Spirit: Healing (Yellow Spirit)</td>
-                        <td>- Similar effectiveness to Blue Spirit.<br>- Good for newbies to use as a temporary spirit.<br>- Need a small amount of EXP to level max.</td>
-                        <td>Auto generate option when it levels up.</td>
-                    </tr>
-                </table>
-            </div>
+                    <div id="gl-accessory" class="tab-panel">
+                        <p class="info-text">Note: Have to use with 4 pieces because set bonus from 2 pieces not worth</p>
+                        <div class="table-wrapper">
+                            <table>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Information</th>
+                                    <th>Option Refinement (In order of priority)</th>
+                                </tr>
+                                <tr>
+                                    <td>Kent’s Ambition</td>
+                                    <td>- The best accessory set for Dhana.<br>- Giving 8% Armor Break. => Have more SD Valor.</td>
+                                    <td>+7% Armor Break<br>+5% Attack Speed<br>+8-10% Crit Rate<br>Any (Max Stamina, Agility are good choices)</td>
+                                </tr>
+                                <tr>
+                                    <td>Rosca’s Destined</td>
+                                    <td>- Shouldn’t use this since Dhana has lots of ASPD buff sources after 2nd Awakening.</td>
+                                    <td>+3% Armor Break<br>+5% Attack Speed<br>+6-8% Crit Rate<br>Any (Max Stamina, Agility)</td>
+                                </tr>
+                                <tr>
+                                    <td>Io’s Memoir</td>
+                                    <td>- The worst choice for endgame build.<br>Give less stat than the two above.<br>A good temporary choice for newbies to replace CD accessories before getting Kent set.</td>
+                                    <td>+7% Armor Break<br>+3% Attack Speed<br>+3000-3300 Crit Damage<br>Any (Evade, Crit Resist)</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
 
-            <h3>Rosca Gear</h3>
-            <p class="info-text">- 2 AB lines is a must for BIS setup.<br>- Without passive Lugman AR, you can do 1 AB 1 AS.</p>
-            <div class="table-wrapper">
-                <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Best Option</th>
-                        <th>3rd Alternative Option</th>
-                    </tr>
-                    <tr>
-                        <td>Esperanza Belt</td>
-                        <td>+5% More DMG: Boss/Named<br>+2200-2500 Crit Damage<br>+2% Armor Break</td>
-                        <td>+2% Attack Speed<br>+25% Super Armor Break</td>
-                    </tr>
-                    <tr>
-                        <td>Esperanza Bracelet</td>
-                        <td>+5% More DMG: Boss/Named<br>+2200-2500 Crit Damage<br>+2% Armor Break</td>
-                        <td>+2% Attack Speed<br>+25% Super Armor Break</td>
-                    </tr>
-                </table>
+                    <div id="gl-spirit" class="tab-panel">
+                        <div class="table-wrapper">
+                            <table>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Information</th>
+                                    <th>Option Refinement (In order of priority)</th>
+                                </tr>
+                                <tr>
+                                    <td>Soul Spirit: Desire of Justice (Black Spirit)</td>
+                                    <td>- Current best spirit for raids.</td>
+                                    <td>Auto generate option when it levels up.</td>
+                                </tr>
+                                <tr>
+                                    <td>Soul Spirit: Faith (Blue Spirit)</td>
+                                    <td>- Stronger than Healing, even stronger than Desire of Justice in Helix F36-40.<br>- Need quite a large amount of EXP to level max.<br>- High uptime when used with Pool armor set.</td>
+                                    <td>When receive damage (30% Rate):<br>+30% More DMG: Boss/Named<br>+15% More DMG: Boss/Named<br>+5% More DMG: Boss/Named<br>For 10 seconds.<br>+5% More DMG: Boss/Named</td>
+                                </tr>
+                                <tr>
+                                    <td>Soul Spirit: Healing (Yellow Spirit)</td>
+                                    <td>- Similar effectiveness to Blue Spirit.<br>- Good for newbies to use as a temporary spirit.<br>- Need a small amount of EXP to level max.</td>
+                                    <td>Auto generate option when it levels up.</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div id="gl-rosca" class="tab-panel">
+                        <p class="info-text">- 2 AB lines is a must for BIS setup.<br>- Without passive Lugman AR, you can do 1 AB 1 AS.</p>
+                        <div class="table-wrapper">
+                            <table>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Best Option</th>
+                                    <th>3rd Alternative Option</th>
+                                </tr>
+                                <tr>
+                                    <td>Esperanza Belt</td>
+                                    <td>+5% More DMG: Boss/Named<br>+2200-2500 Crit Damage<br>+2% Armor Break</td>
+                                    <td>+2% Attack Speed<br>+25% Super Armor Break</td>
+                                </tr>
+                                <tr>
+                                    <td>Esperanza Bracelet</td>
+                                    <td>+5% More DMG: Boss/Named<br>+2200-2500 Crit Damage<br>+2% Armor Break</td>
+                                    <td>+2% Attack Speed<br>+25% Super Armor Break</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Evolved Equipment Section -->
-        <section id="evolved-equipment" class="card">
+        <section id="evolved-equipment" class="card tabs-section">
             <h2>Evolved Equipment</h2>
             
-            <h3>Weapon</h3>
-            <div class="table-wrapper">
-                <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Effect</th>
-                        <th>Option Refinement (In order of priority)</th>
-                    </tr>
-                    <tr>
-                        <td>Ego Sword</td>
-                        <td>Summon 2 additional Shadow Clones when summoning. (Each clone deals 0.6x Dhana Skill Damage)</td>
-                        <td>+6% Armor Break<br>+18% More DMG: Boss / Named<br>+6% Attack Speed<br>+4500-4700 Crit Damage</td>
-                    </tr>
-                    <tr>
-                        <td>Ganjang Makya</td>
-                        <td>Summon Enhanced Light and Dark attack on hit</td>
-                        <td>+6% Armor Break<br>+18% More DMG: Boss / Named<br>+6% Attack Speed<br>+4500-4700 Crit Damage</td>
-                    </tr>
-                </table>
-            </div>
-            <p class="info-text">Information: Ego Sword is currently the best weapon for outstanding damage potential. Ganjang Makya is much weaker than Ego Sword.</p>
+            <div class="tabs-container">
+                <div class="tabs-nav">
+                    <button class="tab-link active" onclick="openTab(event, 'evolved-weapon')">Weapon</button>
+                    <button class="tab-link" onclick="openTab(event, 'evolved-armor')">Armor</button>
+                </div>
 
-            <h3>Armor</h3>
-            <div class="table-wrapper">
-                <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Effect</th>
-                        <th>Option Refinement (In order of priority)</th>
-                    </tr>
-                    <tr>
-                        <td>Corrupted Vacunium (Pool set)</td>
-                        <td><strong>2 pieces:</strong> Summon 1 blood pool dealing damage to you and enemy. (can crit)<br>
-                        <strong>4 pieces:</strong> Summon additional blood pool dealing damage to you and enemy (total 2 pools)</td>
-                        <td>+5% Shorter Cooldown<br>+935-1030 Attack<br>+1815-2228 Crit Damage</td>
-                    </tr>
-                    <tr>
-                        <td colspan="3" class="sub-info">Information: An all round armor set: - Each pool deals 4 hits. - It has decent DPS; - Help proc brooches that are related to hit or receive Crit damage: Penetration, Troll…</td>
-                    </tr>
-                    <tr>
-                        <td>Desire Desire (Desire set) W name 🤡</td>
-                        <td><strong>2 pieces:</strong> +4% Damage when you are in Desire Awakening. Decrease 4% current HP/s<br>
-                        <strong>4 pieces:</strong> +6% Damage when you are in Desire Awakening (10% Damage Total). Decrease 4% current HP/s (-8% HP/s)</td>
-                        <td>+5% Shorter Cooldown<br>+935-1030 Attack<br>+1815-2228 Crit Damage</td>
-                    </tr>
-                    <tr>
-                        <td colspan="3" class="sub-info">Information: Stronger than Corrupted Vacunium but painful to play. Help proc brooches that are related to receive damage (not crit): Backstep, Fury…</td>
-                    </tr>
-                    <tr>
-                        <td>Silence Void (Reversed set)</td>
-                        <td><strong>2 pieces:</strong> +7% Damage - Your Control is reversed periodically. (5sec normal 5sec dumb)<br>
-                        <strong>4 pieces:</strong> +8% Damage (15% Damage Total) - Your Control is reversed irregularly. (sometimes normal sometimes dumb)</td>
-                        <td>+5% Shorter Cooldown<br>+935-1030 Attack<br>+1815-2228 Crit Damage</td>
-                    </tr>
-                    <tr>
-                        <td colspan="3" class="sub-info">Information: Highest damage potential set but not for skill issue players (Ranking mainly)</td>
-                    </tr>
-                    <tr>
-                        <td>Tenacity Soul (EX set)</td>
-                        <td><strong>2 pieces:</strong> +5 SV per 5 seconds<br>
-                        <strong>4 pieces:</strong> Increase ~ 10000% EX Damage</td>
-                        <td>+5% Shorter Cooldown<br>+935-1030 Attack<br>+1815-2228 Crit Damage</td>
-                    </tr>
-                    <tr>
-                        <td colspan="3" class="sub-info">Information: Friendliest set, no side effect (EX1 dmg+ only)</td>
-                    </tr>
-                    <tr>
-                        <td>Sanctum Ghost (dogshit)</td>
-                        <td>Make your FPS drop</td>
-                        <td>Who cares</td>
-                    </tr>
-                </table>
+                <div class="tabs-content">
+                    <div id="evolved-weapon" class="tab-panel active">
+                        <div class="table-wrapper">
+                            <table>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Effect</th>
+                                    <th>Option Refinement (In order of priority)</th>
+                                </tr>
+                                <tr>
+                                    <td>Ego Sword</td>
+                                    <td>Summon 2 additional Shadow Clones when summoning. (Each clone deals 0.6x Dhana Skill Damage)</td>
+                                    <td>+6% Armor Break<br>+18% More DMG: Boss / Named<br>+6% Attack Speed<br>+4500-4700 Crit Damage</td>
+                                </tr>
+                                <tr>
+                                    <td>Ganjang Makya</td>
+                                    <td>Summon Enhanced Light and Dark attack on hit</td>
+                                    <td>+6% Armor Break<br>+18% More DMG: Boss / Named<br>+6% Attack Speed<br>+4500-4700 Crit Damage</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <p class="info-text">Information: Ego Sword is currently the best weapon for outstanding damage potential. Ganjang Makya is much weaker than Ego Sword.</p>
+                    </div>
+
+                    <div id="evolved-armor" class="tab-panel">
+                        <div class="table-wrapper">
+                            <table>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Effect</th>
+                                    <th>Option Refinement (In order of priority)</th>
+                                </tr>
+                                <tr>
+                                    <td>Corrupted Vacunium (Pool set)</td>
+                                    <td><strong>2 pieces:</strong> Summon 1 blood pool dealing damage to you and enemy. (can crit)<br>
+                                    <strong>4 pieces:</strong> Summon additional blood pool dealing damage to you and enemy (total 2 pools)</td>
+                                    <td>+5% Shorter Cooldown<br>+935-1030 Attack<br>+1815-2228 Crit Damage</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="sub-info">Information: An all round armor set: - Each pool deals 4 hits. - It has decent DPS; - Help proc brooches that are related to hit or receive Crit damage: Penetration, Troll…</td>
+                                </tr>
+                                <tr>
+                                    <td>Desire Desire (Desire set) W name 🤡</td>
+                                    <td><strong>2 pieces:</strong> +4% Damage when you are in Desire Awakening. Decrease 4% current HP/s<br>
+                                    <strong>4 pieces:</strong> +6% Damage when you are in Desire Awakening (10% Damage Total). Decrease 4% current HP/s (-8% HP/s)</td>
+                                    <td>+5% Shorter Cooldown<br>+935-1030 Attack<br>+1815-2228 Crit Damage</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="sub-info">Information: Stronger than Corrupted Vacunium but painful to play. Help proc brooches that are related to receive damage (not crit): Backstep, Fury…</td>
+                                </tr>
+                                <tr>
+                                    <td>Silence Void (Reversed set)</td>
+                                    <td><strong>2 pieces:</strong> +7% Damage - Your Control is reversed periodically. (5sec normal 5sec dumb)<br>
+                                    <strong>4 pieces:</strong> +8% Damage (15% Damage Total) - Your Control is reversed irregularly. (sometimes normal sometimes dumb)</td>
+                                    <td>+5% Shorter Cooldown<br>+935-1030 Attack<br>+1815-2228 Crit Damage</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="sub-info">Information: Highest damage potential set but not for skill issue players (Ranking mainly)</td>
+                                </tr>
+                                <tr>
+                                    <td>Tenacity Soul (EX set)</td>
+                                    <td><strong>2 pieces:</strong> +5 SV per 5 seconds<br>
+                                    <strong>4 pieces:</strong> Increase ~ 10000% EX Damage</td>
+                                    <td>+5% Shorter Cooldown<br>+935-1030 Attack<br>+1815-2228 Crit Damage</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="sub-info">Information: Friendliest set, no side effect (EX1 dmg+ only)</td>
+                                </tr>
+                                <tr>
+                                    <td>Sanctum Ghost (dogshit)</td>
+                                    <td>Make your FPS drop</td>
+                                    <td>Who cares</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Akashic Record Section -->
         <section id="akashic" class="card">
             <h2>Akashic Record</h2>
             <p class="info-text">(In order of priority from left to right - Best Setup -> 2nd)</p>
@@ -341,7 +362,6 @@
             </div>
         </section>
 
-        <!-- Soulmate Section -->
         <section id="soulmate" class="card">
             <h2>Soulmate & Artifact</h2>
             <p class="info-text">Ranked based on Damage Potential</p>
@@ -422,7 +442,6 @@
             </div>
         </section>
 
-        <!-- Skill Detail Section -->
         <section id="skill-detail" class="card">
             <h2>Skill Detail</h2>
 
@@ -493,7 +512,6 @@
             </div>
         </section>
 
-        <!-- Build Section -->
         <section id="build" class="card">
             <h2>Kent’s Ambition Build</h2>
             
@@ -575,5 +593,34 @@
         </section>
 
     </div>
+
+    <script>
+    function openTab(evt, tabName) {
+      // Khai báo biến
+      var i, tabpanel, tablinks;
+
+      // Lấy tất cả các panel nội dung và ẩn chúng đi
+      tabpanel = document.getElementsByClassName("tab-panel");
+      for (i = 0; i < tabpanel.length; i++) {
+        tabpanel[i].style.display = "none";
+      }
+
+      // Lấy tất cả các nút tab-link và xóa class 'active'
+      tablinks = document.getElementsByClassName("tab-link");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+
+      // Hiển thị panel nội dung của tab được chọn
+      document.getElementById(tabName).style.display = "block";
+      // Thêm class 'active' vào nút đã nhấp
+      evt.currentTarget.className += " active";
+    }
+
+    // Tùy chọn: Đảm bảo tab đầu tiên hiển thị mặc định khi trang load (nếu cần)
+    // window.onload = function() {
+    //   document.querySelector('.tabs-section:first-child .tab-link:first-child').click();
+    // };
+    </script>
 </body>
 </html>
