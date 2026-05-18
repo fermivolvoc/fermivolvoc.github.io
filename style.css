@@ -1,10 +1,10 @@
-/* full-style.css - Bản hoàn chỉnh với giao diện Tabs Premium */
+/* style.css - Bản hoàn chỉnh Premium + Hỗ trợ hiển thị mặc định */
 
 :root {
     --bg-main: #0B0E14; 
     --bg-card: #151A22; 
     --bg-tab-inactive: #1E252E;
-    --accent: #9A66F9; /* Màu tím Dhana */
+    --accent: #9A66F9; /* Dhana Purple */
     --accent-hover: #B794F4;
     --accent-glow: rgba(154, 102, 249, 0.4);
     --text-main: #E2E8F0; 
@@ -28,7 +28,7 @@ body {
     padding: 2rem;
 }
 
-/* Header */
+/* Header Section */
 header {
     text-align: center;
     margin-bottom: 3rem;
@@ -57,11 +57,7 @@ header h1 {
     box-shadow: 0 0 10px rgba(5, 150, 105, 0.4);
 }
 
-.contact {
-    color: var(--text-muted);
-}
-
-/* Cards & Sections */
+/* Cards */
 .card {
     background-color: var(--bg-card);
     border-radius: 12px;
@@ -83,50 +79,62 @@ h2 {
     margin-top: 0;
     font-size: 1.8rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
-h3 {
-    color: #F8FAFC;
-    margin-top: 2rem;
-    font-size: 1.3rem;
+/* Tab Premium Styling */
+.tabs-section {
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+.tabs-section h2 {
+    padding: 1.5rem 2rem;
+    margin: 0;
+}
+
+.tabs-nav {
     display: flex;
-    align-items: center;
+    background-color: #0F1218;
+    padding: 10px 15px;
+    gap: 8px;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    overflow-x: auto;
 }
 
-h3::before {
-    content: "";
-    display: inline-block;
-    width: 6px;
-    height: 20px;
-    background-color: var(--accent);
-    margin-right: 10px;
-    border-radius: 3px;
-}
-
-/* Typography & Highlights */
-.highlight-yellow {
-    color: var(--yellow-highlight);
-    font-weight: 700;
-}
-
-.info-text {
-    font-style: italic;
+.tab-link {
+    background-color: var(--bg-tab-inactive);
     color: var(--text-muted);
-    font-size: 0.95rem;
-    margin-top: 0.8rem;
-    display: block;
-    background-color: rgba(255, 255, 255, 0.03);
-    padding: 1rem;
-    border-left: 4px solid var(--accent);
-    border-radius: 0 8px 8px 0;
-}
-
-.sub-info {
-    font-style: italic;
-    color: var(--text-muted);
+    border: 1px solid transparent;
+    outline: none;
+    cursor: pointer;
+    padding: 12px 25px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     font-size: 0.9rem;
-    background-color: rgba(0, 0, 0, 0.2) !important;
+    font-weight: 700;
+    border-radius: 8px;
+    white-space: nowrap;
+    min-width: 120px;
+}
+
+.tab-link:hover {
+    background-color: #2D3748;
+    color: #FFF;
+    border-color: var(--accent);
+}
+
+/* Nút khi đang chọn */
+.tab-link.active {
+    background: linear-gradient(135deg, var(--accent) 0%, #7B3FE4 100%);
+    color: #FFFFFF;
+    box-shadow: 0 4px 15px var(--accent-glow);
+    border-color: var(--accent-hover);
+    transform: translateY(-2px);
+}
+
+.tabs-content {
+    padding: 2rem;
+    background-color: var(--bg-card);
 }
 
 /* Tables */
@@ -141,7 +149,6 @@ table {
     width: 100%;
     border-collapse: collapse;
     background-color: rgba(0, 0, 0, 0.2);
-    min-width: 600px;
 }
 
 th, td {
@@ -153,139 +160,22 @@ th, td {
 th {
     background-color: rgba(154, 102, 249, 0.1);
     color: var(--accent);
-    font-weight: 700;
-    text-transform: uppercase;
     font-size: 0.85rem;
+    text-transform: uppercase;
 }
 
-tr:hover td {
-    background-color: rgba(255, 255, 255, 0.03);
+.highlight-yellow {
+    color: var(--yellow-highlight);
+    font-weight: 700;
 }
 
-/* =========================================
-   TABS DECORATION - PHONG CÁCH PREMIUM
-   ========================================= */
-
-.tabs-section {
-    padding: 0; 
-    overflow: hidden;
-}
-
-.tabs-section h2 {
-    padding: 1.5rem 2rem;
-    margin: 0;
-    border-bottom: none;
-}
-
-.tabs-nav {
-    display: flex;
-    background-color: #0F1218;
-    padding: 10px 15px;
-    gap: 10px;
-    border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
-    overflow-x: auto; /* Cuộn ngang trên mobile */
-}
-
-.tab-link {
-    background-color: var(--bg-tab-inactive);
+.info-text {
+    font-style: italic;
     color: var(--text-muted);
-    border: 1px solid transparent;
-    outline: none;
-    cursor: pointer;
-    padding: 10px 20px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     font-size: 0.95rem;
-    font-weight: 600;
-    border-radius: 8px;
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.tab-link:hover {
-    background-color: #2D3748;
-    color: #FFF;
-    border-color: var(--accent);
-}
-
-/* Tab đang được chọn */
-.tab-link.active {
-    background: linear-gradient(135deg, var(--accent) 0%, #7B3FE4 100%);
-    color: #FFFFFF;
-    box-shadow: 0 4px 15px var(--accent-glow);
-    border-color: var(--accent-hover);
-    transform: translateY(-2px);
-}
-
-.tabs-content {
-    padding: 2rem;
-    background-color: var(--bg-card);
-    min-height: 300px;
-}
-
-.tab-panel {
-    display: none;
-    animation: slideUp 0.4s ease-out;
-}
-
-.tab-panel.active {
+    margin-top: 1rem;
     display: block;
-}
-
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Custom Scrollbar cho Tabs-Nav */
-.tabs-nav::-webkit-scrollbar {
-    height: 4px;
-}
-.tabs-nav::-webkit-scrollbar-thumb {
-    background: var(--accent);
-    border-radius: 10px;
-}
-
-/* Synergy Box */
-.synergy-box {
-    background-color: rgba(0, 0, 0, 0.2);
-    padding: 1.5rem;
-    border-radius: 8px;
-    border: 1px dashed var(--accent);
-}
-
-.skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin: 1rem 0;
-}
-
-.skill-tags span {
-    background-color: var(--accent);
-    color: #fff;
-    padding: 0.4rem 1rem;
-    border-radius: 4px;
-    font-weight: 600;
-    font-size: 0.9rem;
-}
-
-.debuff-text {
-    font-weight: bold;
-    color: #EF4444;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .container { padding: 1rem; }
-    header h1 { font-size: 2rem; }
-    .tab-link { padding: 8px 15px; font-size: 0.85rem; }
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 1rem;
+    border-left: 4px solid var(--accent);
 }
