@@ -1,18 +1,31 @@
-/* style.css - Bản hoàn chỉnh Premium + Hỗ trợ hiển thị mặc định */
+/* =========================================
+   VOLVOC'S DHANA GUIDE - PREMIUM CSS
+   ========================================= */
 
 :root {
+    /* Colors Palette */
     --bg-main: #0B0E14; 
     --bg-card: #151A22; 
     --bg-tab-inactive: #1E252E;
-    --accent: #9A66F9; /* Dhana Purple */
+    --border-color: #2D3748;
+    
+    /* Dhana Purple Theme */
+    --accent: #9A66F9; 
     --accent-hover: #B794F4;
     --accent-glow: rgba(154, 102, 249, 0.4);
+    
+    /* Text Colors */
     --text-main: #E2E8F0; 
     --text-muted: #94A3B8;
-    --yellow-highlight: #FBBF24; 
-    --border-color: #2D3748;
+    
+    /* Special Item/Tag Colors */
+    --yellow-highlight: #FBBF24; /* Legend/Gruton Coin Yellow */
+    --blue-darkness: #3B82F6;    /* Darkness/Faith Blue */
+    --blue-bleak: #94A3B8;       /* Bleak Steel Blue (Lạnh & Xám) */
+    --red-debuff: #EF4444;       /* Debuff/Danger Red */
 }
 
+/* Global Styles */
 body {
     background-color: var(--bg-main);
     color: var(--text-main);
@@ -26,6 +39,19 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
+}
+
+/* Scrollbar Custom */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 4px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-main);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 10px;
 }
 
 /* Header Section */
@@ -57,7 +83,12 @@ header h1 {
     box-shadow: 0 0 10px rgba(5, 150, 105, 0.4);
 }
 
-/* Cards */
+.contact {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* Cards & Sections */
 .card {
     background-color: var(--bg-card);
     border-radius: 12px;
@@ -79,9 +110,109 @@ h2 {
     margin-top: 0;
     font-size: 1.8rem;
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-/* Tab Premium Styling */
+h3 {
+    color: #F8FAFC;
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+}
+
+h3::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 20px;
+    background-color: var(--accent);
+    margin-right: 10px;
+    border-radius: 3px;
+}
+
+/* Typography & Glow Highlights */
+.highlight-yellow {
+    color: var(--yellow-highlight);
+    font-weight: 700;
+    text-shadow: 0 0 8px rgba(251, 191, 36, 0.6);
+}
+
+.highlight-blue {
+    color: var(--blue-darkness);
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+.highlight-bleak {
+    color: var(--blue-bleak);
+    font-weight: 700;
+    font-style: italic;
+    text-shadow: 0 0 5px rgba(148, 163, 184, 0.3);
+}
+
+.info-text {
+    font-style: italic;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-top: 1rem;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 1rem;
+    border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+}
+
+.sub-info {
+    font-style: italic;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.debuff-text {
+    font-weight: bold;
+    color: var(--red-debuff);
+}
+
+/* Tables Custom */
+.table-wrapper {
+    overflow-x: auto;
+    margin-top: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(0, 0, 0, 0.2);
+    min-width: 600px;
+}
+
+th, td {
+    padding: 1.2rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background-color: rgba(154, 102, 249, 0.1);
+    color: var(--accent);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+tr:hover td {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* =========================================
+   TABS INTERFACE (PREMIUM STYLE)
+   ========================================= */
+
 .tabs-section {
     padding: 0 !important;
     overflow: hidden;
@@ -90,13 +221,14 @@ h2 {
 .tabs-section h2 {
     padding: 1.5rem 2rem;
     margin: 0;
+    border-bottom: none;
 }
 
 .tabs-nav {
     display: flex;
     background-color: #0F1218;
     padding: 10px 15px;
-    gap: 8px;
+    gap: 10px;
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
     overflow-x: auto;
@@ -108,13 +240,14 @@ h2 {
     border: 1px solid transparent;
     outline: none;
     cursor: pointer;
-    padding: 12px 25px;
+    padding: 10px 20px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     font-size: 0.9rem;
     font-weight: 700;
     border-radius: 8px;
     white-space: nowrap;
-    min-width: 120px;
+    min-width: 110px;
+    text-align: center;
 }
 
 .tab-link:hover {
@@ -123,7 +256,7 @@ h2 {
     border-color: var(--accent);
 }
 
-/* Nút khi đang chọn */
+/* Active State for Tabs */
 .tab-link.active {
     background: linear-gradient(135deg, var(--accent) 0%, #7B3FE4 100%);
     color: #FFFFFF;
@@ -137,45 +270,64 @@ h2 {
     background-color: var(--bg-card);
 }
 
-/* Tables */
-.table-wrapper {
-    overflow-x: auto;
-    margin-top: 1rem;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
+.tab-panel {
+    display: none;
+    animation: slideUp 0.4s ease-out;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: rgba(0, 0, 0, 0.2);
-}
-
-th, td {
-    padding: 1.2rem 1rem;
-    text-align: left;
-    border-bottom: 1px solid var(--border-color);
-}
-
-th {
-    background-color: rgba(154, 102, 249, 0.1);
-    color: var(--accent);
-    font-size: 0.85rem;
-    text-transform: uppercase;
-}
-
-.highlight-yellow {
-    color: var(--yellow-highlight);
-    font-weight: 700;
-}
-
-.info-text {
-    font-style: italic;
-    color: var(--text-muted);
-    font-size: 0.95rem;
-    margin-top: 1rem;
+.tab-panel.active {
     display: block;
-    background-color: rgba(255, 255, 255, 0.03);
-    padding: 1rem;
-    border-left: 4px solid var(--accent);
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Synergy & Skill Tags */
+.synergy-box {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px dashed var(--accent);
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 1rem 0;
+}
+
+.skill-tags span {
+    background-color: var(--accent);
+    color: #fff;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+    .tab-link {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+    }
+    .card {
+        padding: 1rem;
+    }
 }
